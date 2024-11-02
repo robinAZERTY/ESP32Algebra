@@ -9,4 +9,4 @@ puml_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), folder
 
 if __name__ == "__main__":
     hppFiles = [os.path.join(root, name) for root, dirs, files in os.walk(folder2watch) for name in files if name.endswith(".hpp")]
-    hpp2plantuml.CreatePlantUMLFile(hppFiles, puml_file_path)    
+    hpp2plantuml.CreatePlantUMLFile(hppFiles, puml_file_path)

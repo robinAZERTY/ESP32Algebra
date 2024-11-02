@@ -21,7 +21,7 @@ jobs:
     - name: Install PlantUML
       run: sudo apt-get install plantuml
     - name: Generate UML Diagrams
-      run: plantuml lib\linearAlgebra\docs\classDiagram.puml -tsvg  # Générer l'image .svg
+      run: plantuml lib/linearAlgebra/docs/classDiagram.puml -tsvg  # Générer l'image .svg
     - name: Commit UML Diagram
       run: |
         git config --global user.name 'github-actions'
