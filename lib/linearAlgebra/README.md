@@ -2,7 +2,7 @@
 An optimized C++ library for the ESP32, providing robust matrix and vector operations for real-time applications.
 
 ## Classes architecture
-![Classes diagram](lib/linearAlgebra/docs/classDiagram.svg)
+![Classes diagram](docs/classDiagram.svg)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
