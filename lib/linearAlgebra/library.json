@@ -1,0 +1,20 @@
+{
+    "name": "linearAlgebra",
+    "version": "0.0.0",
+    "description": "An optimized C++ library for the ESP32, providing robust matrix and vector operations",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/linearAlgebra"
+    },
+    "authors": [
+      {
+        "name": "robinAZERTY"
+      }
+    ],
+    "license": "MIT",
+    "dependencies": [],
+    "frameworks": ["arduino"],
+    "platforms": ["espressif32"]
+  }
+  
