@@ -1,6 +1,9 @@
 # ESP32AlgebraFilters
 An optimized C++ library for the ESP32, providing robust matrix and vector operations for real-time applications.
 
+## Classes architecture
+![Classes diagram](lib\linearAlgebra\docs\classDiagram.svg)
+
 
 ## License
 
