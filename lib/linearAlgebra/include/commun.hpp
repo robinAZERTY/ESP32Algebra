@@ -1,12 +1,15 @@
 #ifndef COMMUN_HPP
 #define COMMUN_HPP
 
-// #ifndef ARDUINO
-// typedef unsigned long long size_t;
-// #include <string>
-// typedef std::string String;
-// #endif
+#ifdef NATIVE
+#include <iostream>
+typedef unsigned long long size_t;
+#include <string>
+typedef std::string String;
+#else
 #include <Arduino.h>
+#endif
+
 
 template <typename T = float>
 class Vector;
