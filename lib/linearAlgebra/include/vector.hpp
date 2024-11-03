@@ -90,7 +90,7 @@ public:
     template <typename U> Vector *operator=(internal::tmp<Vector<U>> &&v) { return hold(*v.release(), operators::VectorCheckSize); }
     template <typename U> Vector *operator+=(internal::tmp<Vector<U>> &&v) { return holdAdd(*this, *v.release(), operators::VectorCheckSize); }
     template <typename U> Vector *operator-=(internal::tmp<Vector<U>> &&v) { return holdSub(*this, *v.release(), operators::VectorCheckSize); }
-    template <typename U> Vector *operator*=(internal::tmp<Vector<U>> &&v) { return holdMul(*this, *v.release(), operators::VectorCheckSize); }
+    template <typename U> Vector *operator*=(internal::tmp<Vector<T>> &&v) { return holdMul(*this, *v.release(), operators::VectorCheckSize); }
     template <typename U> Vector *operator/=(internal::tmp<Vector<U>> &&v) { return holdDiv(*this, *v.release(), operators::VectorCheckSize); }
 
 
@@ -117,10 +117,10 @@ namespace operators
     template <typename T> internal::tmp<Vector<T>> &&operator-(const Vector<T> &v1, internal::tmp<Vector<T>> &&v2) { return internal::move(*(internal::tmp<Vector<T>> *)v2.holdSub(v1, v2, VectorCheckSize)); }
     template <typename T> internal::tmp<Vector<T>> &&operator-(internal::tmp<Vector<T>> &&v1, internal::tmp<Vector<T>> &&v2) { return internal::move(*(internal::tmp<Vector<T>> *)v1.holdSub(v1, *v2.release(), VectorCheckSize)); }
 
-    // template <typename T> internal::tmp<Vector<T>> &&operator*(const Vector<T> &v1, const Vector<T> &v2) { return internal::move(*(internal::tmp<Vector<T>> *)internal::tmp<Vector<T>>::get(v1.size())->holdMul(v1, v2, VectorCheckSize)); }
-    // template <typename T> internal::tmp<Vector<T>> &&operator*(internal::tmp<Vector<T>> &&v1, const Vector<T> &v2) { return internal::move(*(internal::tmp<Vector<T>> *)v1.holdMul(v1, v2, VectorCheckSize)); }
-    // template <typename T> internal::tmp<Vector<T>> &&operator*(const Vector<T> &v1, internal::tmp<Vector<T>> &&v2) { return internal::move(*(internal::tmp<Vector<T>> *)v2.holdMul(v1, v2, VectorCheckSize)); }
-    // template <typename T> internal::tmp<Vector<T>> &&operator*(internal::tmp<Vector<T>> &&v1, internal::tmp<Vector<T>> &&v2) { return internal::move(*(internal::tmp<Vector<T>> *)v1.holdMul(v1, *v2.release(), VectorCheckSize)); }
+    template <typename T> internal::tmp<Vector<T>> &&operator*(const Vector<T> &v1, const Vector<T> &v2) { return internal::move(*(internal::tmp<Vector<T>> *)internal::tmp<Vector<T>>::get(v1.size())->holdMul(v1, v2, VectorCheckSize)); }
+    template <typename T> internal::tmp<Vector<T>> &&operator*(internal::tmp<Vector<T>> &&v1, const Vector<T> &v2) { return internal::move(*(internal::tmp<Vector<T>> *)v1.holdMul(v1, v2, VectorCheckSize)); }
+    template <typename T> internal::tmp<Vector<T>> &&operator*(const Vector<T> &v1, internal::tmp<Vector<T>> &&v2) { return internal::move(*(internal::tmp<Vector<T>> *)v2.holdMul(v1, v2, VectorCheckSize)); }
+    template <typename T> internal::tmp<Vector<T>> &&operator*(internal::tmp<Vector<T>> &&v1, internal::tmp<Vector<T>> &&v2) { return internal::move(*(internal::tmp<Vector<T>> *)v1.holdMul(v1, *v2.release(), VectorCheckSize)); }
 
     template <typename T> internal::tmp<Vector<T>> &&operator/(const Vector<T> &v1, const Vector<T> &v2) { return internal::move(*(internal::tmp<Vector<T>> *)internal::tmp<Vector<T>>::get(v1.size())->holdDiv(v1, v2, VectorCheckSize)); }
     template <typename T> internal::tmp<Vector<T>> &&operator/(internal::tmp<Vector<T>> &&v1, const Vector<T> &v2) { return internal::move(*(internal::tmp<Vector<T>> *)v1.holdDiv(v1, v2, VectorCheckSize)); }
