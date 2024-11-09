@@ -1,8 +1,8 @@
 /* this main file is used to test the compilation of the library */
-// #include <linearAlgebra.hpp>
-#include <vector.hpp>
+#include <linearAlgebra.hpp>
 
-void setup() {}
+void setup() {
+}
 
 void loop() {}
 
