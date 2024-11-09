@@ -9,8 +9,8 @@ on:
       - linearAlgebra
 
 jobs:
-  build:
-    runs-on: ubuntu-latest  # Vous pouvez aussi choisir 'windows-latest' ou 'macos-latest'
+  test:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -27,17 +27,10 @@ jobs:
           pip install platformio
 
       - name: Install dependencies
-        run: |
-          pio update
-          pio lib install
+        run: platformio lib install
 
-      - name: Run tests
-        run: |
-          pio test -e native -v  # Remplacez "native" par l'environnement que vous utilisez
+      - name: Clean build environment
+        run: platformio run --target clean
 
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: .pio/build/native/test/test_*.xml  # Adaptez le chemin des fichiers de résultats si nécessaire
+      - name: Run tests on the native platform
+        run: platformio test -e native -vvv
