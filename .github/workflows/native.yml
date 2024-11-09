@@ -1,18 +1,43 @@
-on: [push, pull_request]
+name: Run PlatformIO Unit Tests
+
+on:
+  push:
+    branches:
+      - main  # Remplacez "main" par la branche que vous voulez surveiller
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  build:
+    runs-on: ubuntu-latest  # Vous pouvez aussi choisir 'windows-latest' ou 'macos-latest'
 
-    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-    - name: Install PlatformIO
-      run: |
-        python -m pip install --upgrade pip
-        pip install platformio
-    - name: Run tests on the native platform
-      run: platformio test -e native -vvv
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install PlatformIO
+        run: |
+          python -m pip install --upgrade pip
+          pip install platformio
+
+      - name: Install dependencies
+        run: |
+          pio update
+          pio lib install
+
+      - name: Run tests
+        run: |
+          pio test -e native -v  # Remplacez "native" par l'environnement que vous utilisez
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: .pio/build/native/test/test_*.xml  # Adaptez le chemin des fichiers de résultats si nécessaire
