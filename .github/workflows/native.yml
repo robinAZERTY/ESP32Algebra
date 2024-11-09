@@ -3,10 +3,10 @@ name: Run PlatformIO Unit Tests
 on:
   push:
     branches:
-      - main  # Remplacez "main" par la branche que vous voulez surveiller
+      - linearAlgebra 
   pull_request:
     branches:
-      - main
+      - linearAlgebra
 
 jobs:
   build:
