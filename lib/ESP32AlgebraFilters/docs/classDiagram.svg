@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="616px" preserveAspectRatio="none" style="width:629px;height:616px;" version="1.1" viewBox="0 0 629 616" width="629px" zoomAndPan="magnify"><defs><filter height="300%" id="f15fjoke7fu7lj" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[122a5ab7a0f045bc73ed07a98b4b8ea7]
+class Ekf--><rect fill="#FEFECE" filter="url(#f15fjoke7fu7lj)" height="598.6016" id="Ekf" style="stroke: #A80036; stroke-width: 1.5;" width="608" x="7" y="7"/><ellipse cx="22" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M24.9688,28.6406 Q24.3906,28.9375 23.75,29.0781 Q23.1094,29.2344 22.4063,29.2344 Q19.9063,29.2344 18.5781,27.5938 Q17.2656,25.9375 17.2656,22.8125 Q17.2656,19.6875 18.5781,18.0313 Q19.9063,16.375 22.4063,16.375 Q23.1094,16.375 23.75,16.5313 Q24.4063,16.6875 24.9688,16.9844 L24.9688,19.7031 Q24.3438,19.125 23.75,18.8594 Q23.1563,18.5781 22.5313,18.5781 Q21.1875,18.5781 20.5,19.6563 Q19.8125,20.7188 19.8125,22.8125 Q19.8125,24.9063 20.5,25.9844 Q21.1875,27.0469 22.5313,27.0469 Q23.1563,27.0469 23.75,26.7813 Q24.3438,26.5 24.9688,25.9219 L24.9688,28.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="19" x="36" y="27.1543">Ekf</text><rect fill="#FFFFFF" height="15.9688" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" width="555" x="63" y="4"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="553" x="64" y="16.1387">template&lt;size_t x_dim, size_t u_dim, size_t c_dim=1, size_t z_num=1, typename T=float&gt;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="614" y1="39" y2="39"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="47"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="27" y="53.2104">Fc_val : Matrix&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="59.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="27" y="66.0151">Fu_val : Matrix&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="72.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="27" y="78.8198">Fx_val : Matrix&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="85.4141"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="27" y="91.6245">H_P : Matrix&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="98.2188"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="27" y="104.4292">H_val : Matrix&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="111.0234"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="27" y="117.2339">H : Matrix_f2&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="123.8281"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="27" y="130.0386">Fc : Matrix_f3&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="136.6328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="27" y="142.8433">Fu : Matrix_f3&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="149.4375"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="100" x="27" y="155.6479">Fx : Matrix_f3&lt;T&gt;</text><ellipse cx="18" cy="165.2422" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="27" y="168.4526">C : Vector&lt;T&gt;</text><ellipse cx="18" cy="178.0469" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="81" x="27" y="181.2573">U : Vector&lt;T&gt;</text><ellipse cx="18" cy="190.8516" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="27" y="194.062">X : Vector&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="200.6563"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="27" y="206.8667">prev_X : Vector&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="213.4609"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="110" x="27" y="219.6714">h_val : Vector&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="226.2656"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="87" x="27" y="232.4761">y : Vector&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="239.0703"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="105" x="27" y="245.2808">h : Vector_f2&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="251.875"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="94" x="27" y="258.0854">f : Vector_f3&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="264.6797"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="71" x="27" y="270.8901">initted : bool</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="277.4844"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="68" x="27" y="283.6948">alpha : float</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="290.2891"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="59" x="27" y="296.4995">ds : float[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="303.0938"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="108" x="27" y="309.3042">S : ldl_matrix&lt;T&gt;[]</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="315.8984"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="130" x="27" y="322.1089">K : rowMajorMatrix&lt;T&gt;</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="328.7031"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="27" y="334.9136">z_dim : size_t[]</text><ellipse cx="18" cy="344.5078" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="102" x="27" y="347.7183">P : symMatrix&lt;T&gt;</text><ellipse cx="18" cy="357.3125" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="104" x="27" y="360.5229">Q : symMatrix&lt;T&gt;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="614" y1="367.1172" y2="367.1172"/><ellipse cx="18" cy="378.1172" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="25" x="27" y="381.3276">Ekf()</text><ellipse cx="18" cy="390.9219" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="111" x="27" y="394.1323">Ekf(Vector_f3&lt;T&gt; f)</text><ellipse cx="18" cy="403.7266" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="34" x="27" y="406.937">~Ekf()</text><ellipse cx="18" cy="416.5313" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="331" x="27" y="419.7417">getMahalanobisDistance(const size_t z_idx) : float {query}</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="426.3359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="204" x="27" y="432.5464">compute_S(const size_t z_idx) : void</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="439.1406"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="263" x="27" y="445.3511">finite_diff_Fu(const size_t i, const T eps) : void</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="451.9453"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="114" x="27" y="458.1558">finite_diff_Fu() : void</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="464.75"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="262" x="27" y="470.9604">finite_diff_Fx(const size_t i, const T eps) : void</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="477.5547"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="113" x="27" y="483.7651">finite_diff_Fx() : void</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="490.3594"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="364" x="27" y="496.5698">finite_diff_H(const size_t z_idx, const size_t i, const T eps) : void</text><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="15" y="503.1641"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="207" x="27" y="509.3745">finite_diff_H(const size_t z_idx) : void</text><ellipse cx="18" cy="518.9688" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="82" x="27" y="522.1792">predict() : void</text><ellipse cx="18" cy="531.7734" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="267" x="27" y="534.9839">setJacobianFunction_Fu(Matrix_f3&lt;T&gt; Fu) : void</text><ellipse cx="18" cy="544.5781" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="265" x="27" y="547.7886">setJacobianFunction_Fx(Matrix_f3&lt;T&gt; Fx) : void</text><ellipse cx="18" cy="557.3828" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="328" x="27" y="560.5933">setJacobianFunction_H(Matrix_f2&lt;T&gt; H, size_t z_idx) : void</text><ellipse cx="18" cy="570.1875" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="422" x="27" y="573.3979">setMeasurementFunction(Vector_f2&lt;T&gt; h, size_t z_dim, size_t z_idx) : void</text><ellipse cx="18" cy="582.9922" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="250" x="27" y="586.2026">setPredictionFunction(Vector_f3&lt;T&gt; f) : void</text><ellipse cx="18" cy="595.7969" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="454" x="27" y="599.0073">update(const Vector&lt;T&gt;&amp; Z, const symMatrix&lt;T&gt;&amp; R, const size_t z_idx) : void</text><!--MD5=[141dab7e8d7ef53492a74329b08c75d8]
+@startuml
+
+
+
+
+
+
+class Ekf <template<size_t x_dim, size_t u_dim, size_t c_dim=1, size_t z_num=1, typename T=float>> {
+	+Ekf()
+	+Ekf(Vector_f3<T> f)
+	+~Ekf()
+	-Fc_val : Matrix<T>
+	-Fu_val : Matrix<T>
+	-Fx_val : Matrix<T>
+	-H_P : Matrix<T>[]
+	-H_val : Matrix<T>[]
+	-H : Matrix_f2<T>[]
+	-Fc : Matrix_f3<T>
+	-Fu : Matrix_f3<T>
+	-Fx : Matrix_f3<T>
+	+C : Vector<T>
+	+U : Vector<T>
+	+X : Vector<T>
+	-prev_X : Vector<T>
+	-h_val : Vector<T>[]
+	-y : Vector<T>[]
+	-h : Vector_f2<T>[]
+	-f : Vector_f3<T>
+	-initted : bool
+	-alpha : float
+	+getMahalanobisDistance(const size_t z_idx) : float {query}
+	-ds : float[]
+	-S : ldl_matrix<T>[]
+	-K : rowMajorMatrix<T>
+	-z_dim : size_t[]
+	+P : symMatrix<T>
+	+Q : symMatrix<T>
+	-compute_S(const size_t z_idx) : void
+	-finite_diff_Fu(const size_t i, const T eps) : void
+	-finite_diff_Fu() : void
+	-finite_diff_Fx(const size_t i, const T eps) : void
+	-finite_diff_Fx() : void
+	-finite_diff_H(const size_t z_idx, const size_t i, const T eps) : void
+	-finite_diff_H(const size_t z_idx) : void
+	+predict() : void
+	+setJacobianFunction_Fu(Matrix_f3<T> Fu) : void
+	+setJacobianFunction_Fx(Matrix_f3<T> Fx) : void
+	+setJacobianFunction_H(Matrix_f2<T> H, size_t z_idx) : void
+	+setMeasurementFunction(Vector_f2<T> h, size_t z_dim, size_t z_idx) : void
+	+setPredictionFunction(Vector_f3<T> f) : void
+	+update(const Vector<T>& Z, const symMatrix<T>& R, const size_t z_idx) : void
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 10:22:07 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.25+9
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
