@@ -22,15 +22,6 @@ Next steps:
 #include "symMatrix.hpp"
 using namespace operators;
 
-// template <typename T>
-// using Vector_f3 = internal::tmp<Vector<T>> && (*)(const Vector<T> &, const Vector<T> &, const Vector<T> &);
-// template <typename T>
-// using Vector_f2 = internal::tmp<Vector<T>> && (*)(const Vector<T> &, const Vector<T> &);
-// template <typename T>
-// using Matrix_f3 = internal::tmp<Matrix<T>> && (*)(const Vector<T> &, const Vector<T> &, const Vector<T> &);
-// template <typename T>
-// using Matrix_f2 = internal::tmp<Matrix<T>> && (*)(const Vector<T> &, const Vector<T> &);
-
 template <size_t x_dim, size_t u_dim, size_t c_dim = 1, size_t z_num = 1, typename T = float>
 class Ekf
 {

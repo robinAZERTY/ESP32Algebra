@@ -1,9 +1,6 @@
 #define EKF_CPP
 #include "ekf.hpp"
 
-// template <size_t x_dim, size_t u_dim, size_t z_num, typename T>
-// rowMajorMatrix<T> Ekf<x_dim, u_dim, z_num, T>::K;
-
 template <size_t x_dim, size_t u_dim, size_t c_dim, size_t z_num, typename T>
 Ekf<x_dim, u_dim, c_dim, z_num, T>::Ekf()
 {
