@@ -12,7 +12,6 @@ class Ukf
 {
     // private:
 public:
-    bool UML_test = false;
     Matrix<T> K;
     
     Vector_f3<T> f = nullptr;          // state transition function
