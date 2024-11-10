@@ -696,11 +696,7 @@ void setup() {
     RUN_TEST(test_suboperator);
     RUN_TEST(test_muloperator);
     RUN_TEST(test_divoperator);
-
-    // Ajoute d'autres tests ici.
-    #ifdef NATIVE
     UNITY_END();
-    #endif
 }
 
 void loop() {

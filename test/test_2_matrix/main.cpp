@@ -163,9 +163,7 @@ void setup() {
     RUN_TEST(test_rowMajor);
     RUN_TEST(test_tmp_rowMajor);
     RUN_TEST(test_expression);
-    #ifdef NATIVE
     UNITY_END();
-    #endif
 }
 
 void loop() {
