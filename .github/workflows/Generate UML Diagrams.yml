@@ -26,6 +26,7 @@ jobs:
       run: |
         git config --global user.name 'github-actions'
         git config --global user.email 'actions@github.com'
+        git add lib/ESP32AlgebraFilters/docs/classDiagram.puml
         git add lib/ESP32AlgebraFilters/docs/classDiagram.svg
         git commit -m "Updated UML diagram"
     - name: Push changes
