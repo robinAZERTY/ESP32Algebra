@@ -3,7 +3,7 @@ name: Generate UML Diagrams
 on:
   push:
     paths:
-      - 'lib/linearAlgebra/**'
+      - 'lib/ESP32AlgebraFilters/**'
 
 jobs:
   plantuml:
