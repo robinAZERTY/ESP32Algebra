@@ -66,7 +66,6 @@ class Ukf <template<size_t x_dim, size_t u_dim, size_t c_dim=1, size_t z_num=1, 
 	+h_val : Vector<T>[]
 	+h : Vector_f2<T>[]
 	+f : Vector_f3<T>
-	+UML_test : bool
 	+sqrt_x_dim_u_dim : const T
 	+P : ldl_matrix<T>
 	+Q : ldl_matrix<T>
