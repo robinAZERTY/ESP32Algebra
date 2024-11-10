@@ -9,11 +9,11 @@ This C++ library for PlatformIO is designed for embedded applications. Originall
 - **Optimized Matrix Operations**: Efficient handling of symmetric matrices and decomposition methods (e.g., Cholesky decomposition) for performance improvements.
 - **Modular and Extensible**: Built with modularity in mind, making it easy to integrate with other projects or expand with additional functionality.
 
-## Classe(s) architecture
+## Classes architecture
 ![Classes diagram](lib/ESP32AlgebraFilters/docs/classDiagram.svg)
 
 ## Usage
-This library is ideal for anyone implementing filters or control algorithms in C++ on embedded platforms. The current release includes foundational matrix and vector classes, and a Kalman filter class will be added soon.
+This library is ideal for anyone learning how filters work in C++ on embedded platforms. The current release includes foundational matrix and vector classes, a Kalman filter, and a UKF.
 
 ## Roadmap
 - Add Kalman filter class for both linear (KF) and nonlinear (UKF) applications.
