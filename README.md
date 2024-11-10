@@ -17,7 +17,7 @@ This library is ideal for anyone implementing filters or control algorithms in C
 - Implement unit tests for matrix and vector operations.
 - Continue optimizing code for embedded use cases.
 
-## Developper's Note
+## Developer's Note
 I'm a student working on this library out of curiosity and a desire to learn about matrix computations and state estimators. Through this project, I aim to deepen my understanding of these concepts, particularly in the context of embedded systems.
 
 ---

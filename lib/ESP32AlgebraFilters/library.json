@@ -1,0 +1,26 @@
+{
+  "name": "ESP32AlgebraFilters",
+  "version": "0.0.0",
+  "description": "An optimized C++ library for the ESP32, providing Kalman filters.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/main/lib/ESP32AlgebraFilters"
+  },
+  "authors": [
+    {
+      "name": "robinAZERTY"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": [
+    {
+      "name": "linearAlgebra",
+      "version": "0.0.0",
+      "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/linearAlgebra/lib/linearAlgebra"
+    }
+  ],
+  "platforms": [
+    "espressif32",
+    "native"
+  ]
+}
