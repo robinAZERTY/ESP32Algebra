@@ -13,7 +13,7 @@ This C++ library for PlatformIO is designed for embedded applications. Originall
 ![Classes diagram](lib/ESP32AlgebraFilters/docs/classDiagram.svg)
 
 ## Usage
-This library is ideal for anyone implementing filters or control algorithms in C++ on embedded platforms. The current release includes foundational matrix and vector classes, and a Kalman filter class will be added soon.
+This library is ideal for anyone learning how filters work in C++ on embedded platforms. The current release includes foundational matrix and vector classes, a Kalman filter, and a UKF.
 
 ## Roadmap
 - Add Kalman filter class for both linear (KF) and nonlinear (UKF) applications.
