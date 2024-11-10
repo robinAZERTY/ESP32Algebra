@@ -1,5 +1,6 @@
 /* this main file is used to test the compilation of the library */
 #include <ekf.hpp>
+#include <ukf.hpp>
 
 void setup() {
 }
