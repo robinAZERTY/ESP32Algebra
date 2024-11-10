@@ -2,7 +2,7 @@
 
 ## Matrix and Vector Library for ESP32 and Embedded Systems
 
-This repository contains a custom C++ matrix and vector library tailored for use in embedded systems, particularly for robotic applications on platforms like the ESP32. Originally developed to support Kalman filtering in drone and mobile robotics projects, this library is designed for flexibility, efficiency, and ease of use. It includes optimized implementations to minimize computational redundancy, especially useful for resource-constrained environments.
+This C++ library for PlatformIO is designed for embedded applications. Originally developed for the ESP32, it is optimized for efficiency without hardware vectorization, making it well-suited for CPU-based calculations. Flexible and easy to use, it meets the needs of robotics projects by providing lightweight support for basic matrix operations and state estimation.
 
 ## Key Features
 - **Type Agnostic Vectors**: The vector class supports any data type, allowing for calculations on various types when applicable.
@@ -19,3 +19,6 @@ This library is ideal for anyone implementing filters or control algorithms in C
 
 ## Developper's Note
 I'm a student working on this library out of curiosity and a desire to learn about matrix computations and state estimators. Through this project, I aim to deepen my understanding of these concepts, particularly in the context of embedded systems.
+
+---
+_Note: This README was translated from French to English with the assistance of ChatGPT._
