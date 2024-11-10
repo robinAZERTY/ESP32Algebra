@@ -1,3 +1,74 @@
 @startuml
 
+
+
+
+
+/' Objects '/
+
+class Ekf <template<size_t x_dim, size_t u_dim, size_t c_dim=1, size_t z_num=1, typename T=float>> {
+	+Ekf()
+	+Ekf(Vector_f3<T> f)
+	+~Ekf()
+	-Fc_val : Matrix<T>
+	-Fu_val : Matrix<T>
+	-Fx_val : Matrix<T>
+	-H_P : Matrix<T>[]
+	-H_val : Matrix<T>[]
+	-H : Matrix_f2<T>[]
+	-Fc : Matrix_f3<T>
+	-Fu : Matrix_f3<T>
+	-Fx : Matrix_f3<T>
+	+C : Vector<T>
+	+U : Vector<T>
+	+X : Vector<T>
+	-prev_X : Vector<T>
+	-h_val : Vector<T>[]
+	-y : Vector<T>[]
+	-h : Vector_f2<T>[]
+	-f : Vector_f3<T>
+	-initted : bool
+	-alpha : float
+	+getMahalanobisDistance(const size_t z_idx) : float {query}
+	-ds : float[]
+	-S : ldl_matrix<T>[]
+	-K : rowMajorMatrix<T>
+	-z_dim : size_t[]
+	+P : symMatrix<T>
+	+Q : symMatrix<T>
+	-compute_S(const size_t z_idx) : void
+	-finite_diff_Fu(const size_t i, const T eps) : void
+	-finite_diff_Fu() : void
+	-finite_diff_Fx(const size_t i, const T eps) : void
+	-finite_diff_Fx() : void
+	-finite_diff_H(const size_t z_idx, const size_t i, const T eps) : void
+	-finite_diff_H(const size_t z_idx) : void
+	+predict() : void
+	+setJacobianFunction_Fu(Matrix_f3<T> Fu) : void
+	+setJacobianFunction_Fx(Matrix_f3<T> Fx) : void
+	+setJacobianFunction_H(Matrix_f2<T> H, size_t z_idx) : void
+	+setMeasurementFunction(Vector_f2<T> h, size_t z_dim, size_t z_idx) : void
+	+setPredictionFunction(Vector_f3<T> f) : void
+	+update(const Vector<T>& Z, const symMatrix<T>& R, const size_t z_idx) : void
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+
+
+
+
+/' Nested objects '/
+
+
+
 @enduml
