@@ -17,7 +17,7 @@ jobs:
     - name: Install dependencies
       run: pip install hpp2plantuml
     - name: Run PlantUML Builder
-      run: python plantUmlBuilder.py  # Exécuter le script Python
+      run: python ESP32AlgebraFiltersPlantUmlBuilder.py  # Exécuter le script Python
     - name: Install PlantUML
       run: sudo apt-get install plantuml
     - name: Generate UML Diagrams

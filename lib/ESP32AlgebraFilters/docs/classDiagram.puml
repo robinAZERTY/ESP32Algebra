@@ -53,6 +53,34 @@ class Ekf <template<size_t x_dim, size_t u_dim, size_t c_dim=1, size_t z_num=1, 
 }
 
 
+class Ukf <template<size_t x_dim, size_t u_dim, size_t c_dim=1, size_t z_num=1, typename T=float>> {
+	+Ukf()
+	+Ukf(Vector_f3<T> f)
+	+~Ukf()
+	+K : Matrix<T>
+	+X_sp : Matrix<T>
+	+h_sp : Matrix<T>[]
+	+C : Vector<T>
+	+U : Vector<T>
+	+X : Vector<T>
+	+h_val : Vector<T>[]
+	+h : Vector_f2<T>[]
+	+f : Vector_f3<T>
+	+sqrt_x_dim_u_dim : const T
+	+P : ldl_matrix<T>
+	+Q : ldl_matrix<T>
+	+S : ldl_matrix<T>[]
+	+z_dim : size_t[]
+	+compute_S(const size_t z_idx) : void
+	+compute_measurement_sigma_points(const size_t z_idx) : void
+	+compute_state_sigma_points() : void
+	+predict() : void
+	+setMeasurementFunction(Vector_f2<T> h, size_t z_dim, size_t z_idx) : void
+	+setPredictionFunction(Vector_f3<T> f) : void
+	+update(const Vector<T>& Z, const symMatrix<T>& R, const size_t z_idx) : void
+}
+
+
 
 
 
