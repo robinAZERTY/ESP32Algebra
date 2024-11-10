@@ -83,6 +83,7 @@ public:
     inline float getMahalanobisDistance(const size_t z_idx = 0) const { return ds[z_idx]; }
 };
 
+
 #ifndef EKF_CPP
 #include "ekf.cpp"
 #endif
