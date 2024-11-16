@@ -29,6 +29,6 @@
 #include <symMatrix.hpp>
 #include <ul_triangMatrix.hpp>
 #include <uu_triangMatrix.hpp>
-#include <ldl_matrix.hpp>
+#include <ldl_Matrix.hpp>
 
 #endif
