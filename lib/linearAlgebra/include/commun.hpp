@@ -22,8 +22,9 @@
 #define COMMUN_HPP
 
 #ifdef NATIVE
-#include <iostream>
-typedef unsigned long long size_t;
+// #include <iostream>
+// typedef unsigned long long size_t;
+#include <cstring>
 #include <string>
 typedef std::string String;
 #else

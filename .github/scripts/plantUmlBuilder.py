@@ -19,7 +19,10 @@ with open(global_puml_file, "r") as file:
     global_puml = file.read()
 for hppFile in hppFiles:
     puml_file_path = os.path.join(output_folder, os.path.basename(hppFile).replace(".hpp", ".puml"))
-    hpp2plantuml.CreatePlantUMLFile([hppFile], puml_file_path)
+    #exclude the files without classes
+    hpp_file_content = open(hppFile, "r").read()
+    if "class" in hpp_file_content:
+        hpp2plantuml.CreatePlantUMLFile([hppFile], puml_file_path)
 
     
 
