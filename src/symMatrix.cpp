@@ -44,7 +44,7 @@ symMatrix<T> *symMatrix<T>::holdMul(const symMatrix<U> &a, const symMatrix<V> &b
     return this;
 };
 
-////////////////////////////// ldl_marix //////////////////////////////
+////////////////////////////// ldl_matrix //////////////////////////////
 template <typename T>
 template<typename U> symMatrix<T> *symMatrix<T>::holdInv(ldl_matrix<U> &other, const bool checkSize)
 {

@@ -24,7 +24,7 @@
   ],
   "exports": {
     "include": [
-      "LICENCSE",
+      "LICENSE",
       "docs/*",
       "examples/*",
       "include/*",

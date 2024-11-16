@@ -78,7 +78,7 @@ public:
     template <typename U> diagMatrix *operator-=(internal::tmp<diagMatrix<U>> &&other) noexcept { return this->holdSub(*this,*other.release(), operators::MatrixCheckSize); };
     template <typename U> diagMatrix *operator*=(internal::tmp<diagMatrix<U>> &&other) noexcept { return this->holdMul(*this,*other.release(), operators::MatrixCheckSize); };
 
-    // other functionnalities
+    // other functionalities
     T det() const;
     template <typename U> diagMatrix *holdInv(const diagMatrix<U> &other, const bool checkSize = true) { return this->holdInv(1, other, checkSize); };
 
