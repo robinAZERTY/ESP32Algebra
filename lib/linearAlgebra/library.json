@@ -1,20 +1,28 @@
 {
   "name": "linearAlgebra",
   "version": "0.0.0",
-  "description": "An optimized C++ library for the ESP32, providing matrix and vector operations",
+  "description": "LinearAlgebra is a lightweight library designed for efficient manipulation of vectors and matrices, tailored for resource-constrained systems like the ESP32. It provides support for various types of matrices to optimize memory usage and computational performance. The library focuses on iterative implementations to ensure giving developers full control over the mathematical operations performed. Ideal for projects requiring fine-tuned linear algebra computations without unnecessary overhead.",
+  "keywords": [
+    "linear algebra",
+    "matrix",
+    "vector",
+    "math",
+    "esp32",
+    "embedded",
+    "algebra",
+    "mathematics"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/linearAlgebra/lib/linearAlgebra"
+    "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/linearAlgebra"
   },
   "authors": [
     {
-      "name": "robinAZERTY"
+      "name": "robinAZERTY",
+      "maintainer": true
     }
   ],
   "license": "GPL-3.0-only",
-  "dependencies": [
-  ],
-  "platforms": [
-    "espressif32"
-  ]
+  "frameworks": "arduino",
+  "platforms": "espressif32"
 }
