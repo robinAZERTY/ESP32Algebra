@@ -1,11 +1,19 @@
-# ESP32AlgebraFilters
-An optimized C++ library for the ESP32, providing robust matrix and vector operations for real-time applications.
+# ESP32AlgebraFilters - PlatformIO referential project
+This folder is a referential where the ESP32AlgebraFilters library is developed and tested.
+It is not available for installation via PlatformIO Library Manager yet. I need to write clean tests and documentation before that.
 
 ## Classes architecture
-![Classes diagram](docs/classDiagram.svg)
+![Classes diagram](docs/classes/classDiagram.svg)
+
+## Current state
+A lots of classes are already implemented, but only few of them are officially and partially tested.
+
+## Roadmap
+- [ ] Unit tests for all classes
+- [~] Documentation for all classes
+- [ ] Performance tests
+- [ ] More examples
+- [ ] Publish on PlatformIO Library Manager
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-I'm a student in the field of electrical engineering and computer science. I'm passionate about robotics and embedded systems. I'm always looking for new challenges and opportunities to learn and grow.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
