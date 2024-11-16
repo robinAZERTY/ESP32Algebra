@@ -1,6 +1,6 @@
 # ESP32AlgebraFilters - PlatformIO referential project
 This folder is a referential where the ESP32AlgebraFilters library is developed and tested.
-It is not available for installation via PlatformIO Library Manager yet. I need to write clean tests and documentation before that.
+It is not available for installation via PlatformIO Library Manager yet. But it will be soon.
 
 ## Classes architecture
 ![Classes diagram](docs/classes/classDiagram.svg)
