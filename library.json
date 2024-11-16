@@ -1,5 +1,5 @@
 {
-  "name": "linearAlgebra",
+  "name": "linear algebra",
   "version": "0.0.0",
   "description": "LinearAlgebra is a lightweight library designed for efficient manipulation of vectors and matrices, tailored for resource-constrained systems like the ESP32. It provides support for various types of matrices to optimize memory usage and computational performance. The library focuses on iterative implementations to ensure giving developers full control over the mathematical operations performed. Ideal for projects requiring fine-tuned linear algebra computations without unnecessary overhead.",
   "keywords": [
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/robinAZERTY/linearAlgebra.git"
+    "url": "https://github.com/robinAZERTY/linear_algebra.git"
   },
   "authors": [
     {

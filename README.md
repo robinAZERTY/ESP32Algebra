@@ -1,4 +1,4 @@
-# linearAlgebra - PlatformIO referential project
+# linear algebra - PlatformIO referential project
 ## Overview
 LinearAlgebra is a lightweight library for manipulation of vectors and matrices, tailored for resource-constrained systems like the ESP32. It provides support for various types of matrices to optimize memory usage and computational performance. The library focuses on iterative implementations to ensure giving developers full control over the mathematical operations performed. Ideal for projects requiring fine-tuned linear algebra computations without unnecessary overhead.
 
