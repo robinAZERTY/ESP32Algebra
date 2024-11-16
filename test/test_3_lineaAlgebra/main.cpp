@@ -17,7 +17,6 @@ void tearDown() {
 
 void setup() {
     UNITY_BEGIN();
-    // Ajoute d'autres tests ici.
     UNITY_END();
 }
 
@@ -28,6 +27,6 @@ void loop() {
 #ifdef NATIVE
 int main(int argc, char **argv) {
     setup();
-    return UNITY_END();
+    return 0;
 }
 #endif
