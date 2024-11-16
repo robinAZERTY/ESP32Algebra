@@ -1,0 +1,52 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+abstract class MatrixBase <template<typename T=float>> {
+	+MatrixBase()
+	+MatrixBase(const size_t rows, const size_t cols)
+	#checkOverlap(const MatrixBase<U>& a, const MatrixBase<V>& b) : MatrixBase<T>*
+	#checkSize_add(const MatrixBase<U>& a, const MatrixBase<V>& b) : MatrixBase<T>*
+	#checkSize_mul(const MatrixBase<U>& a, const MatrixBase<V>& b) : MatrixBase<T>*
+	+fill(const T value) : MatrixBase<T>*
+	#refer(const Vector<T>& data, const size_t rows, const size_t cols) : MatrixBase<T>*
+	#refer(const T* data, const size_t rows, const size_t cols) : MatrixBase<T>*
+	+resize(const size_t rows, const size_t cols, const bool deallocIfPossible, const bool saveData) : MatrixBase<T>*
+	+resizeLike(const MatrixBase<U>& other, const bool deallocIfPossible, const bool saveData) : MatrixBase<T>*
+	#swap(MatrixBase<T>& other) : MatrixBase<T>*
+	+{abstract} operator()(const size_t row, const size_t col) : T&
+	+operator()(const size_t row, const size_t col) : T& {query}
+	+isAdditionCompatible(const MatrixBase<U>& other) : bool {query}
+	+isMultiplicationCompatible(const MatrixBase<U>& other) : bool {query}
+	#_cols : size_t
+	#_rows : size_t
+	+cols() : size_t {query}
+	#{abstract} minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#minMemorySize() : size_t {query}
+	+rows() : size_t {query}
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

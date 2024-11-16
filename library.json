@@ -22,6 +22,15 @@
       "maintainer": true
     }
   ],
+  "exports": {
+    "include": [
+      "LICENCSE",
+      "docs/*",
+      "examples/*",
+      "include/*",
+      "src/*"
+    ]
+  },
   "license": "GPL-3.0-only",
   "frameworks": "arduino",
   "platforms": "espressif32"

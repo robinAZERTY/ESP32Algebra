@@ -1,0 +1,63 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class uu_triangMatrix <template<typename T>> {
+	+uu_triangMatrix()
+	+uu_triangMatrix(const size_t order)
+	+operator()(const size_t row, const size_t col) : T&
+	+operator()(const size_t row, const size_t col) : T& {query}
+	#minMemorySize(const size_t order) : size_t {query}
+	#minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#{static} staticHelper : static const uu_triangMatrix<T>
+	+hold(const uu_triangMatrix& other, const bool checkSize) : uu_triangMatrix*
+	+hold(const uu_triangMatrix<U>& other, const bool checkSize) : uu_triangMatrix*
+	+holdAdd(const uu_triangMatrix<U>& a, const T& b, const bool checkSize) : uu_triangMatrix*
+	+holdAdd(const uu_triangMatrix<U>& a, const uu_triangMatrix<V>& b, const bool checkSize) : uu_triangMatrix*
+	+holdDiv(const uu_triangMatrix<U>& a, const T& b, const bool checkSize) : uu_triangMatrix*
+	+holdMul(const uu_triangMatrix<U>& a, const T& b, const bool checkSize) : uu_triangMatrix*
+	+holdSub(const uu_triangMatrix<U>& a, const T& b, const bool checkSize) : uu_triangMatrix*
+	+holdSub(const T& a, const uu_triangMatrix<U>& b, const bool checkSize) : uu_triangMatrix*
+	+holdSub(const uu_triangMatrix<U>& a, const uu_triangMatrix<V>& b, const bool checkSize) : uu_triangMatrix*
+	+operator*=(const T& data) : uu_triangMatrix*
+	+operator+=(const T& data) : uu_triangMatrix*
+	+operator+=(const uu_triangMatrix<U>& other) : uu_triangMatrix*
+	+operator+=(internal::tmp<uu_triangMatrix<U>>&& other) : uu_triangMatrix*
+	+operator-=(const T& data) : uu_triangMatrix*
+	+operator-=(const uu_triangMatrix<U>& other) : uu_triangMatrix*
+	+operator-=(internal::tmp<uu_triangMatrix<U>>&& other) : uu_triangMatrix*
+	+operator/=(const T& data) : uu_triangMatrix*
+	+operator=(const uu_triangMatrix& other) : uu_triangMatrix*
+	+operator=(const uu_triangMatrix<U>& other) : uu_triangMatrix*
+	+operator=(internal::tmp<uu_triangMatrix>&& other) : uu_triangMatrix*
+	+operator=(internal::tmp<uu_triangMatrix<U>>&& other) : uu_triangMatrix*
+	#swap(uu_triangMatrix& other) : uu_triangMatrix*
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.uu_triangMatrix *-- .uu_triangMatrix
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml
