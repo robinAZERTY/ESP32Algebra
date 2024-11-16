@@ -40,12 +40,10 @@ jobs:
 
       - name: Capture Coverage Data
         run: |
-          # Capturer la couverture uniquement pour linearAlgebra
-          lcov --directory . --capture --output-file coverage.info
-          # Inclure uniquement les répertoires souhaités
-          lcov --extract coverage.info "include/*", "src/*" --output-file coverage.info
-          # Liste les informations de couverture
-          lcov --list coverage.info
+
+          lcov --capture --directory . --output-file coverage.info
+          lcov --remove coverage.info '/usr/*' '*/test/*' --output-file coverage_filtered.info
+          lcov --list coverage_filtered.info
           
       - name: Generate HTML Report
         run: |

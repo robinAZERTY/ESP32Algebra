@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/linearAlgebra"
+    "url": "https://github.com/robinAZERTY/ESP32AlgebraFilters/tree/linearAlgebra.git"
   },
   "authors": [
     {
