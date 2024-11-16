@@ -1,0 +1,86 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class symMatrix <template<typename T>> {
+	+symMatrix()
+	+symMatrix(const size_t order)
+	+symMatrix(const size_t rows, const size_t cols)
+	+operator()(const size_t row, const size_t col) : T&
+	#minMemorySize(const size_t order) : size_t {query}
+	#minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#{static} staticHelper : static const symMatrix<T>
+	+addMul(const rowMajorMatrix<U>& a, const rowMajorMatrix<U>& b, const bool checkSize, const bool checkOverlap) : symMatrix*
+	+addMul(const rowMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize) : symMatrix*
+	+hold(const symMatrix& other, const bool checkSize) : symMatrix*
+	+hold(const symMatrix<U>& other, const bool checkSize) : symMatrix*
+	+hold(const rowMajorMatrix<U>& other, const bool checkSize) : symMatrix*
+	+holdAdd(const symMatrix<U>& a, const symMatrix<V>& b, const bool checkSize) : symMatrix*
+	+holdAdd(const rowMajorMatrix<U>& a, const symMatrix<V>& b, const bool checkSize) : symMatrix*
+	+holdInv(ldl_matrix<U>& other, const bool checkSize) : symMatrix*
+	+holdMul(const symMatrix<U>& a, const symMatrix<V>& b, const bool checkSize, const bool checkOverlap) : symMatrix*
+	+holdMul(const rowMajorMatrix<U>& a, const rowMajorMatrix<U>& b, const bool checkSize, const bool checkOverlap) : symMatrix*
+	+holdMul(const rowMajorMatrix<U>& a, const symMatrix<V>& b, const bool checkSize, const bool checkOverlap) : symMatrix*
+	+holdMul(const symMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize, const bool checkOverlap) : symMatrix*
+	+holdMul(const rowMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize) : symMatrix*
+	+holdMul(const triangMatrix<U>& a, const uu_triangMatrix<U>& b, const bool checkSize) : symMatrix*
+	+holdSub(const symMatrix<U>& a, const symMatrix<V>& b, const bool checkSize) : symMatrix*
+	+holdSub(const rowMajorMatrix<U>& a, const symMatrix<V>& b, const bool checkSize) : symMatrix*
+	+holdSub(const symMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize) : symMatrix*
+	+operator*=(const T& data) : symMatrix*
+	+operator*=(const symMatrix<U>& other) : symMatrix*
+	+operator*=(internal::tmp<symMatrix<U>>&& other) : symMatrix*
+	+operator*=(const rowMajorMatrix<U>& other) : symMatrix*
+	+operator*=(internal::tmp<rowMajorMatrix<U>>&& other) : symMatrix*
+	+operator+=(const T& data) : symMatrix*
+	+operator+=(const symMatrix<U>& other) : symMatrix*
+	+operator+=(internal::tmp<symMatrix<U>>&& other) : symMatrix*
+	+operator+=(const rowMajorMatrix<U>& other) : symMatrix*
+	+operator+=(internal::tmp<rowMajorMatrix<U>>&& other) : symMatrix*
+	+operator-=(const T& data) : symMatrix*
+	+operator-=(const symMatrix<U>& other) : symMatrix*
+	+operator-=(internal::tmp<symMatrix<U>>&& other) : symMatrix*
+	+operator-=(const rowMajorMatrix<U>& other) : symMatrix*
+	+operator-=(internal::tmp<rowMajorMatrix<U>>&& other) : symMatrix*
+	+operator/=(const T& data) : symMatrix*
+	+operator=(const symMatrix& other) : symMatrix*
+	+operator=(const symMatrix<U>& other) : symMatrix*
+	+operator=(internal::tmp<symMatrix>&& other) : symMatrix*
+	+operator=(internal::tmp<symMatrix<U>>&& other) : symMatrix*
+	+operator=(const rowMajorMatrix<U>& other) : symMatrix*
+	+operator=(internal::tmp<rowMajorMatrix<U>>&& other) : symMatrix*
+	+subMul(const rowMajorMatrix<U>& a, const rowMajorMatrix<U>& b, const bool checkSize, const bool checkOverlap) : symMatrix*
+	#swap(symMatrix& other) : symMatrix*
+	+holdAdd(const symMatrix<U>& a, const T& b, const bool checkSize) : symMatrix<T>*
+	+holdMul(const symMatrix<U>& a, const T& b, const bool checkSize) : symMatrix<T>*
+	+holdSub(const symMatrix<U>& a, const T& b, const bool checkSize) : symMatrix<T>*
+	+holdSub(const T& a, const symMatrix<U>& b, const bool checkSize) : symMatrix<T>*
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.symMatrix *-- .symMatrix
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

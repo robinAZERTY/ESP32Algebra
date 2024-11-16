@@ -1,0 +1,103 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class rowMajorMatrix <template<typename T>> {
+	+rowMajorMatrix()
+	+rowMajorMatrix(const size_t rows, const size_t cols)
+	+rowMajorMatrix(T* data, const size_t rows, const size_t cols, const bool share)
+	+rowMajorMatrix(const rowMajorMatrix& other)
+	+rowMajorMatrix(const rowMajorMatrix<U>& other)
+	+rowMajorMatrix(internal::tmp<rowMajorMatrix<T>>&& other)
+	+rowMajorMatrix(internal::tmp<rowMajorMatrix<U>>&& other)
+	+rowMajorMatrix(const colMajorMatrix<U>& other)
+	+rowMajorMatrix(const internal::tmp<colMajorMatrix<U>>& other)
+	+operator()(const size_t row, const size_t col) : T&
+	+operator()(const size_t row, const size_t col) : T& {query}
+	+hold(const rowMajorMatrix& other, const bool checkSize) : rowMajorMatrix*
+	+operator*=(const T& data) : rowMajorMatrix*
+	+operator+=(const T& data) : rowMajorMatrix*
+	+operator-=(const T& data) : rowMajorMatrix*
+	+operator/=(const T& data) : rowMajorMatrix*
+	+operator=(internal::tmp<rowMajorMatrix>&& other) : rowMajorMatrix*
+	+hold(const rowMajorMatrix<U>& other, const bool checkSize) : rowMajorMatrix<T>*
+	+hold(const colMajorMatrix<U>& other, const bool checkSize) : rowMajorMatrix<T>*
+	+hold(const diagMatrix<U>& other, const bool checkSize) : rowMajorMatrix<T>*
+	+holdAdd(const rowMajorMatrix<U>& a, const T& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdAdd(const rowMajorMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdAdd(const colMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdAdd(const rowMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdAdd(const rowMajorMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdDiv(const rowMajorMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdMul(const rowMajorMatrix<U>& a, const T& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdMul(const rowMajorMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize, const bool checkOverlap) : rowMajorMatrix<T>*
+	+holdMul(const colMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize, const bool checkOverlap) : rowMajorMatrix<T>*
+	+holdMul(const rowMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize, const bool checkOverlap) : rowMajorMatrix<T>*
+	+holdMul(const colMajorMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize, const bool checkOverlap) : rowMajorMatrix<T>*
+	+holdMul(const rowMajorMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdMul(const diagMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdMul(const rowMajorMatrix<U>& a, const symMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdMul(const colMajorMatrix<U>& a, const symMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const rowMajorMatrix<U>& a, const T& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const T& a, const rowMajorMatrix<U>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const rowMajorMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const colMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const rowMajorMatrix<U>& a, const colMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const colMajorMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const rowMajorMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+holdSub(const diagMatrix<U>& a, const rowMajorMatrix<V>& b, const bool checkSize) : rowMajorMatrix<T>*
+	+operator*=(const rowMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator*=(internal::tmp<rowMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator*=(const colMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator*=(internal::tmp<colMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator*=(const diagMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator+=(const rowMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator+=(internal::tmp<rowMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator+=(const colMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator+=(internal::tmp<colMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator+=(const diagMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator-=(const rowMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator-=(internal::tmp<rowMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator-=(const colMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator-=(internal::tmp<colMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator-=(const diagMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator/=(const diagMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator=(const rowMajorMatrix<T>& other) : rowMajorMatrix<T>*
+	+operator=(const rowMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator=(internal::tmp<rowMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator=(const colMajorMatrix<U>& other) : rowMajorMatrix<T>*
+	+operator=(internal::tmp<colMajorMatrix<U>>&& other) : rowMajorMatrix<T>*
+	+operator=(const diagMatrix<U>& other) : rowMajorMatrix<T>*
+	#refer(rowMajorMatrix<T>& other) : rowMajorMatrix<T>*
+	#swap(rowMajorMatrix<T>& other) : rowMajorMatrix<T>*
+	#minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#{static} staticHelper : static const rowMajorMatrix<T>
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.rowMajorMatrix *-- .rowMajorMatrix
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

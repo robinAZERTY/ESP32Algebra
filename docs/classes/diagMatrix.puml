@@ -1,0 +1,70 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class diagMatrix <template<typename T>> {
+	+diagMatrix(const size_t rows, const size_t cols)
+	+diagMatrix(const size_t size)
+	+diagMatrix()
+	+det() : T {query}
+	+operator()(const size_t row, const size_t col) : T&
+	+operator()(const size_t row, const size_t col) : T& {query}
+	+holdInv(const diagMatrix<U>& other, const bool checkSize) : diagMatrix*
+	+operator*=(const T& data) : diagMatrix*
+	+operator*=(const diagMatrix<U>& other) : diagMatrix*
+	+operator*=(internal::tmp<diagMatrix<U>>&& other) : diagMatrix*
+	+operator+=(const T& data) : diagMatrix*
+	+operator+=(const diagMatrix<U>& other) : diagMatrix*
+	+operator+=(internal::tmp<diagMatrix<U>>&& other) : diagMatrix*
+	+operator-=(const T& data) : diagMatrix*
+	+operator-=(const diagMatrix<U>& other) : diagMatrix*
+	+operator-=(internal::tmp<diagMatrix<U>>&& other) : diagMatrix*
+	+operator/=(const T& data) : diagMatrix*
+	+operator=(const diagMatrix& other) : diagMatrix*
+	+operator=(const diagMatrix<U>& other) : diagMatrix*
+	+operator=(internal::tmp<diagMatrix>&& other) : diagMatrix*
+	+operator=(internal::tmp<diagMatrix<U>>&& other) : diagMatrix*
+	+checkIsSquare() : diagMatrix<T>* {query}
+	+hold(const diagMatrix<T>& other, const bool checkSize) : diagMatrix<T>*
+	+hold(const diagMatrix<U>& other, const bool checkSize) : diagMatrix<T>*
+	+holdAdd(const diagMatrix<U>& a, const T& b, const bool checkSize) : diagMatrix<T>*
+	+holdAdd(const diagMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : diagMatrix<T>*
+	+holdDiv(const diagMatrix<U>& a, const T& b, const bool checkSize) : diagMatrix<T>*
+	+holdInv(const T val, const diagMatrix<U>& other, const bool checkSize) : diagMatrix<T>*
+	+holdMul(const diagMatrix<U>& a, const T& b, const bool checkSize) : diagMatrix<T>*
+	+holdMul(const diagMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : diagMatrix<T>*
+	+holdSub(const diagMatrix<U>& a, const T& b, const bool checkSize) : diagMatrix<T>*
+	+holdSub(const T& a, const diagMatrix<U>& b, const bool checkSize) : diagMatrix<T>*
+	+holdSub(const diagMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : diagMatrix<T>*
+	#swap(diagMatrix<T>& other) : diagMatrix<T>*
+	#minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#{static} staticHelper : static const diagMatrix<T>
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.diagMatrix *-- .diagMatrix
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

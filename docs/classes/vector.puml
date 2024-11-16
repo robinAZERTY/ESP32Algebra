@@ -1,0 +1,106 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class Vector <template<typename T>> {
+	+Vector()
+	+Vector(const size_t N)
+	+Vector(internal::tmp<Vector>&& v)
+	+Vector(internal::tmp<Vector<U>>&& v)
+	+Vector(const Vector& v, const bool share)
+	+Vector(T* begin, const size_t N, const bool share)
+	+~Vector()
+	+operator[](size_t i) : T {query}
+	+operator[](const size_t i) : T&
+	#_begin : T*
+	#_end : T*
+	#_endOfStorage : T*
+	+begin() : T* {query}
+	+end() : T* {query}
+	+dot(const Vector<U>& other, const bool checkSize) : V
+	+addMul(const rowMajorMatrix<U>& a, const Vector<V>& b, const bool checkSize) : Vector*
+	#allocate(const size_t capacity, const bool deallocIfPossible, const bool saveData) : Vector*
+	+fill(const T val) : Vector*
+	+hold(T* begin, const size_t N, const bool checkSize) : Vector*
+	+hold(const Vector& v, const bool checkSize) : Vector*
+	+hold(const Vector<U>& v, const bool checkSize) : Vector*
+	+holdAdd(const Vector<U>& v1, const Vector<V>& v2, const bool checkSize) : Vector*
+	+holdAdd(const Vector<U>& v1, const T val, const bool checkSize) : Vector*
+	+holdDiv(const Vector<U>& v1, const Vector<V>& v2, const bool checkSize) : Vector*
+	+holdDiv(const T val, const Vector<U>& v, const bool checkSize) : Vector*
+	+holdMul(const MatrixBase<U>& a, const Vector<V>& b, const bool checkSize) : Vector*
+	+holdMul(const rowMajorMatrix<U>& a, const Vector<V>& b, const bool checkSize) : Vector*
+	+holdMul(const Vector<U>& v1, const Vector<V>& v2, const bool checkSize) : Vector*
+	+holdMul(const Vector<U>& v1, const V val, const bool checkSize) : Vector*
+	+holdSub(const Vector<U>& v1, const Vector<V>& v2, const bool checkSize) : Vector*
+	+holdSub(const Vector<U>& v1, const T val, const bool checkSize) : Vector*
+	+holdSub(const T val, const Vector<U>& v, const bool checkSize) : Vector*
+	+insert(const T& value, const size_t index) : Vector*
+	+operator*=(const Vector<U>& v) : Vector*
+	+operator*=(const T& val) : Vector*
+	+operator*=(internal::tmp<Vector<T>>&& v) : Vector*
+	+operator+=(const Vector<U>& v) : Vector*
+	+operator+=(const T& val) : Vector*
+	+operator+=(internal::tmp<Vector<U>>&& v) : Vector*
+	+operator-=(const Vector<U>& v) : Vector*
+	+operator-=(const T& val) : Vector*
+	+operator-=(internal::tmp<Vector<U>>&& v) : Vector*
+	+operator/=(const Vector<U>& v) : Vector*
+	+operator/=(const T& val) : Vector*
+	+operator/=(internal::tmp<Vector<U>>&& v) : Vector*
+	+operator=(const Vector& v) : Vector*
+	+operator=(const Vector<U>& v) : Vector*
+	+operator=(internal::tmp<Vector>&& v) : Vector*
+	+operator=(internal::tmp<Vector<U>>&& v) : Vector*
+	+pop_back() : Vector*
+	+push_back(const T& value) : Vector*
+	#refer(const Vector& other) : Vector*
+	#refer(T* data, size_t length) : Vector*
+	+removeAt(const size_t index) : Vector*
+	+removeFirst(const T& value) : Vector*
+	+removeLast(const T& value) : Vector*
+	+resize(const size_t N, const bool deallocateIfPossible, const bool saveData) : Vector*
+	+sort(const bool ascending) : Vector*
+	#swap(Vector& other) : Vector*
+	+findAll(const T& value, Vector<size_t>& indices_holder) : Vector<size_t>* {query}
+	+operator!=(const Vector<U>& v) : bool {query}
+	+operator!=(const T val) : bool {query}
+	+operator==(const Vector<U>& v) : bool {query}
+	+operator==(const T val) : bool {query}
+	#overlap(const Vector<U>& other) : bool {query}
+	+shared() : bool {query}
+	+capacity() : size_t {query}
+	+findFirst(const T& value) : size_t {query}
+	+findLast(const T& value) : size_t {query}
+	#minMemorySize(const size_t N) : size_t {query}
+	+size() : size_t {query}
+	#{static} staticHelper : static const Vector
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.Vector *-- .Vector
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

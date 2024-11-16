@@ -1,0 +1,39 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class ldl_matrix <template<typename T>> {
+	+ldl_matrix()
+	+ldl_matrix(const size_t order)
+	+D : diagMatrix<T>
+	+decompose() : ldl_matrix<T>*
+	+referT() : ldl_matrix<T>*
+	+resize(const size_t order, const bool deallocIfPossible, const bool saveData) : ldl_matrix<T>*
+	+L : ul_triangMatrix<T>
+	+LT : uu_triangMatrix<T>
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

@@ -1,0 +1,67 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class ul_triangMatrix <template<typename T>> {
+	+ul_triangMatrix()
+	+ul_triangMatrix(const size_t order)
+	+operator()(const size_t row, const size_t col) : T&
+	+operator()(const size_t row, const size_t col) : T& {query}
+	#minMemorySize(const size_t order) : size_t {query}
+	#minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#{static} staticHelper : static const ul_triangMatrix<T>
+	+hold(const ul_triangMatrix& other, const bool checkSize) : ul_triangMatrix*
+	+hold(const ul_triangMatrix<U>& other, const bool checkSize) : ul_triangMatrix*
+	+holdAdd(const ul_triangMatrix<U>& a, const T& b, const bool checkSize) : ul_triangMatrix*
+	+holdAdd(const ul_triangMatrix<U>& a, const ul_triangMatrix<V>& b, const bool checkSize) : ul_triangMatrix*
+	+holdDiv(const ul_triangMatrix<U>& a, const T& b, const bool checkSize) : ul_triangMatrix*
+	+holdInv(const ul_triangMatrix<U>& other, const bool checkSize) : ul_triangMatrix*
+	+holdMul(const ul_triangMatrix<U>& a, const T& b, const bool checkSize) : ul_triangMatrix*
+	+holdMul(const ul_triangMatrix<U>& a, const ul_triangMatrix<V>& b, const bool checkSize, const bool checkOverlap) : ul_triangMatrix*
+	+holdSub(const ul_triangMatrix<U>& a, const T& b, const bool checkSize) : ul_triangMatrix*
+	+holdSub(const T& a, const ul_triangMatrix<U>& b, const bool checkSize) : ul_triangMatrix*
+	+holdSub(const ul_triangMatrix<U>& a, const ul_triangMatrix<V>& b, const bool checkSize) : ul_triangMatrix*
+	+operator*=(const T& data) : ul_triangMatrix*
+	+operator*=(const ul_triangMatrix<U>& other) : ul_triangMatrix*
+	+operator*=(internal::tmp<ul_triangMatrix<U>>&& other) : ul_triangMatrix*
+	+operator+=(const T& data) : ul_triangMatrix*
+	+operator+=(const ul_triangMatrix<U>& other) : ul_triangMatrix*
+	+operator+=(internal::tmp<ul_triangMatrix<U>>&& other) : ul_triangMatrix*
+	+operator-=(const T& data) : ul_triangMatrix*
+	+operator-=(const ul_triangMatrix<U>& other) : ul_triangMatrix*
+	+operator-=(internal::tmp<ul_triangMatrix<U>>&& other) : ul_triangMatrix*
+	+operator/=(const T& data) : ul_triangMatrix*
+	+operator=(const ul_triangMatrix& other) : ul_triangMatrix*
+	+operator=(const ul_triangMatrix<U>& other) : ul_triangMatrix*
+	+operator=(internal::tmp<ul_triangMatrix>&& other) : ul_triangMatrix*
+	+operator=(internal::tmp<ul_triangMatrix<U>>&& other) : ul_triangMatrix*
+	#swap(ul_triangMatrix& other) : ul_triangMatrix*
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.ul_triangMatrix *-- .ul_triangMatrix
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+namespace internal {
+	class tmp <template<class Derived>> {
+		+currentlyUsed : bool
+		+{static} bufferSize() : size_t
+		+{static} currentlyUsedCount() : size_t
+		-{static} buffer : static Vector<tmp*>
+		+{static} get(Args ... shape) : tmp*
+		+release() : tmp*
+		+{static} freeAll() : void
+	}
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+internal.tmp o-- internal.tmp
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

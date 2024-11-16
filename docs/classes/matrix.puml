@@ -1,0 +1,66 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class Matrix <template<typename TT>> {
+	+Matrix()
+	+Matrix(const size_t rows, const size_t cols)
+	+Matrix(TT* data, const size_t rows, const size_t cols, const bool share)
+	+Matrix(const Matrix<TT>& other)
+	+Matrix(const Matrix<U>& other)
+	+Matrix(const rowMajorMatrix<TT>& other)
+	+Matrix(const rowMajorMatrix<U>& other)
+	+Matrix(const colMajorMatrix<TT>& other)
+	+Matrix(const colMajorMatrix<U>& other)
+	+Matrix(internal::tmp<rowMajorMatrix<TT>>&& other)
+	+Matrix(internal::tmp<colMajorMatrix<TT>>&& other)
+	+operator*=(const U& data) : Matrix<TT>*
+	+operator*=(const rowMajorMatrix<U>& other) : Matrix<TT>*
+	+operator*=(internal::tmp<rowMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator*=(const colMajorMatrix<U>& other) : Matrix<TT>*
+	+operator*=(internal::tmp<colMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator+=(const U& data) : Matrix<TT>*
+	+operator+=(const rowMajorMatrix<U>& other) : Matrix<TT>*
+	+operator+=(internal::tmp<rowMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator+=(const colMajorMatrix<U>& other) : Matrix<TT>*
+	+operator+=(internal::tmp<colMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator-=(const U& data) : Matrix<TT>*
+	+operator-=(const rowMajorMatrix<U>& other) : Matrix<TT>*
+	+operator-=(internal::tmp<rowMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator-=(const colMajorMatrix<U>& other) : Matrix<TT>*
+	+operator-=(internal::tmp<colMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator/=(const U& data) : Matrix<TT>*
+	+operator=(const rowMajorMatrix<U>& other) : Matrix<TT>*
+	+operator=(internal::tmp<rowMajorMatrix<U>>&& other) : Matrix<TT>*
+	+operator=(const colMajorMatrix<U>& other) : Matrix<TT>*
+	+operator=(internal::tmp<colMajorMatrix<U>>&& other) : Matrix<TT>*
+	+referT() : Matrix<TT>*
+	+resize(const size_t rows, const size_t cols, const bool deallocIfPossible, const bool saveData) : Matrix<TT>*
+	#swap(Matrix<TT>& other) : Matrix<TT>*
+	+T : colMajorMatrix<TT>
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml

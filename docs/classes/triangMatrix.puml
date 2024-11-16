@@ -1,0 +1,67 @@
+@startuml
+
+
+
+
+
+/' Objects '/
+
+class triangMatrix <template<typename T>> {
+	+triangMatrix()
+	+triangMatrix(const size_t order)
+	+operator()(const size_t row, const size_t col) : T&
+	+operator()(const size_t row, const size_t col) : T& {query}
+	#minMemorySize(const size_t order) : size_t {query}
+	#minMemorySize(const size_t rows, const size_t cols) : size_t {query}
+	#{static} staticHelper : static const triangMatrix<T>
+	+hold(const triangMatrix& other, const bool checkSize) : triangMatrix*
+	+hold(const triangMatrix<U>& other, const bool checkSize) : triangMatrix*
+	+holdAdd(const triangMatrix<U>& a, const T& b, const bool checkSize) : triangMatrix*
+	+holdAdd(const triangMatrix<U>& a, const triangMatrix<V>& b, const bool checkSize) : triangMatrix*
+	+holdDiv(const triangMatrix<U>& a, const T& b, const bool checkSize) : triangMatrix*
+	+holdMul(const triangMatrix<U>& a, const T& b, const bool checkSize) : triangMatrix*
+	+holdMul(const triangMatrix<U>& a, const triangMatrix<V>& b, const bool checkSize, const bool checkOverlap) : triangMatrix*
+	+holdMul(const ul_triangMatrix<U>& a, const diagMatrix<V>& b, const bool checkSize) : triangMatrix*
+	+holdSub(const triangMatrix<U>& a, const T& b, const bool checkSize) : triangMatrix*
+	+holdSub(const T& a, const triangMatrix<U>& b, const bool checkSize) : triangMatrix*
+	+holdSub(const triangMatrix<U>& a, const triangMatrix<V>& b, const bool checkSize) : triangMatrix*
+	+operator*=(const T& data) : triangMatrix*
+	+operator*=(const triangMatrix<U>& other) : triangMatrix*
+	+operator*=(internal::tmp<triangMatrix<U>>&& other) : triangMatrix*
+	+operator+=(const T& data) : triangMatrix*
+	+operator+=(const triangMatrix<U>& other) : triangMatrix*
+	+operator+=(internal::tmp<triangMatrix<U>>&& other) : triangMatrix*
+	+operator-=(const T& data) : triangMatrix*
+	+operator-=(const triangMatrix<U>& other) : triangMatrix*
+	+operator-=(internal::tmp<triangMatrix<U>>&& other) : triangMatrix*
+	+operator/=(const T& data) : triangMatrix*
+	+operator=(const triangMatrix& other) : triangMatrix*
+	+operator=(const triangMatrix<U>& other) : triangMatrix*
+	+operator=(internal::tmp<triangMatrix>&& other) : triangMatrix*
+	+operator=(internal::tmp<triangMatrix<U>>&& other) : triangMatrix*
+	#swap(triangMatrix& other) : triangMatrix*
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.triangMatrix *-- .triangMatrix
+
+
+
+
+
+
+/' Nested objects '/
+
+
+
+@enduml
