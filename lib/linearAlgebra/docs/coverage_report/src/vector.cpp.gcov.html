@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2024-11-16 15:12:35</td>
+            <td class="headerValue">2024-11-16 21:13:14</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">64</td>
@@ -124,15 +124,15 @@
 <a name="62"><span class="lineNum">      62 </span><span class="lineCov">          1 : }</span></a>
 <a name="63"><span class="lineNum">      63 </span>            : </a>
 <a name="64"><span class="lineNum">      64 </span>            : template &lt;typename T&gt;</a>
-<a name="65"><span class="lineNum">      65 </span><span class="lineCov">        110 : Vector&lt;T&gt;::~Vector()</span></a>
+<a name="65"><span class="lineNum">      65 </span><span class="lineCov">        105 : Vector&lt;T&gt;::~Vector()</span></a>
 <a name="66"><span class="lineNum">      66 </span>            : {</a>
-<a name="67"><span class="lineNum">      67 </span><span class="lineCov">        110 :     internal::vec_count--;</span></a>
-<a name="68"><span class="lineNum">      68 </span><span class="lineCov">        110 :     if (!shared())</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">        105 :     internal::vec_count--;</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineCov">        105 :     if (!shared())</span></a>
 <a name="69"><span class="lineNum">      69 </span>            :     {</a>
-<a name="70"><span class="lineNum">      70 </span><span class="lineCov">        105 :         internal::alloc_count-=capacity()*sizeof(T);</span></a>
-<a name="71"><span class="lineNum">      71 </span><span class="lineCov">        105 :         delete[] _begin;</span></a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineCov">        100 :         internal::alloc_count-=capacity()*sizeof(T);</span></a>
+<a name="71"><span class="lineNum">      71 </span><span class="lineCov">        100 :         delete[] _begin;</span></a>
 <a name="72"><span class="lineNum">      72 </span>            :     }</a>
-<a name="73"><span class="lineNum">      73 </span><span class="lineCov">        110 : }</span></a>
+<a name="73"><span class="lineNum">      73 </span><span class="lineCov">        105 : }</span></a>
 <a name="74"><span class="lineNum">      74 </span>            : </a>
 <a name="75"><span class="lineNum">      75 </span>            : template &lt;typename T&gt;</a>
 <a name="76"><span class="lineNum">      76 </span><span class="lineCov">         54 : Vector&lt;T&gt; *Vector&lt;T&gt;::fill(const T val)</span></a>
