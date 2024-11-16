@@ -20,7 +20,7 @@
 #ifndef UL_TRIANG_MATRIX_HPP
 #define UL_TRIANG_MATRIX_HPP
 
-#include "MatrixBase.hpp"
+#include "matrixBase.hpp"
 
 template <typename T>
 class ul_triangMatrix : public MatrixBase<T>

@@ -17,6 +17,7 @@
  * along with linearAlgebra library. If not, see <https://www.gnu.org/licenses/>.
  */
 
+
 #define VECTOR_CPP
 #include "vector.hpp"
 

@@ -20,7 +20,7 @@
 #ifndef DIAG_MATRIX_HPP
 #define DIAG_MATRIX_HPP
 
-#include "matrixbase.hpp"
+#include "matrixBase.hpp"
 
 template <typename T>
 class diagMatrix : public MatrixBase<T>

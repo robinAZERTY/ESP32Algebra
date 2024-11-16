@@ -20,7 +20,7 @@
 #ifndef TRIANG_MATRIX_HPP
 #define TRIANG_MATRIX_HPP
 
-#include "MatrixBase.hpp"
+#include "matrixBase.hpp"
 
 template <typename T>
 class triangMatrix : public MatrixBase<T>
