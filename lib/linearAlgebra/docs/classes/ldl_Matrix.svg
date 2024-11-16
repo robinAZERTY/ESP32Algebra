@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="168px" preserveAspectRatio="none" style="width:579px;height:168px;" version="1.1" viewBox="0 0 579 168" width="579px" zoomAndPan="magnify"><defs><filter height="300%" id="f10x62fzdesvm2" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[3281a24fdf4c1ef146bdf918d66ff719]
+class ldl_matrix--><rect fill="#FEFECE" filter="url(#f10x62fzdesvm2)" height="150.4375" id="ldl_matrix" style="stroke: #A80036; stroke-width: 1.5;" width="558" x="7" y="7"/><ellipse cx="175.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M178.7188,28.6406 Q178.1406,28.9375 177.5,29.0781 Q176.8594,29.2344 176.1563,29.2344 Q173.6563,29.2344 172.3281,27.5938 Q171.0156,25.9375 171.0156,22.8125 Q171.0156,19.6875 172.3281,18.0313 Q173.6563,16.375 176.1563,16.375 Q176.8594,16.375 177.5,16.5313 Q178.1563,16.6875 178.7188,16.9844 L178.7188,19.7031 Q178.0938,19.125 177.5,18.8594 Q176.9063,18.5781 176.2813,18.5781 Q174.9375,18.5781 174.25,19.6563 Q173.5625,20.7188 173.5625,22.8125 Q173.5625,24.9063 174.25,25.9844 Q174.9375,27.0469 176.2813,27.0469 Q176.9063,27.0469 177.5,26.7813 Q178.0938,26.5 178.7188,25.9219 L178.7188,28.6406 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="58" x="196.25" y="27.1543">ldl_matrix</text><rect fill="#FFFFFF" height="15.9688" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" width="152" x="416" y="4"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="150" x="417" y="16.1387">template&lt;typename T&gt;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="564" y1="39" y2="39"/><ellipse cx="18" cy="50" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="103" x="27" y="53.2104">D : diagMatrix&lt;T&gt;</text><ellipse cx="18" cy="62.8047" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="126" x="27" y="66.0151">L : ul_triangMatrix&lt;T&gt;</text><ellipse cx="18" cy="75.6094" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="137" x="27" y="78.8198">LT : uu_triangMatrix&lt;T&gt;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="8" x2="564" y1="85.4141" y2="85.4141"/><ellipse cx="18" cy="96.4141" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="63" x="27" y="99.6245">ldl_matrix()</text><ellipse cx="18" cy="109.2188" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="165" x="27" y="112.4292">ldl_matrix(const size_t order)</text><ellipse cx="18" cy="122.0234" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="172" x="27" y="125.2339">decompose() : ldl_matrix&lt;T&gt;*</text><ellipse cx="18" cy="134.8281" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="141" x="27" y="138.0386">referT() : ldl_matrix&lt;T&gt;*</text><ellipse cx="18" cy="147.6328" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="532" x="27" y="150.8433">resize(const size_t order, const bool deallocIfPossible, const bool saveData) : ldl_matrix&lt;T&gt;*</text><!--MD5=[75171a7a1b515efe871eada42eac5bdd]
+@startuml
+
+
+
+
+
+
+class ldl_matrix <template<typename T>> {
+	+ldl_matrix()
+	+ldl_matrix(const size_t order)
+	+D : diagMatrix<T>
+	+decompose() : ldl_matrix<T>*
+	+referT() : ldl_matrix<T>*
+	+resize(const size_t order, const bool deallocIfPossible, const bool saveData) : ldl_matrix<T>*
+	+L : ul_triangMatrix<T>
+	+LT : uu_triangMatrix<T>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2020.02(Sun Mar 01 10:22:07 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.25+9
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
