@@ -6,6 +6,9 @@ pio test -e native
 #include <unity.h>
 #include <linearAlgebra.hpp>
 
+ldl_matrix<float> ldl_matrix_test;
+triangMatrix<float> triang_matrix_test;
+
 void setUp() {
     // Initialisation avant chaque test (laisser vide si inutile)
 }

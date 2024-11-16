@@ -44,11 +44,8 @@ jobs:
           lcov --directory . --capture --output-file coverage.info
           # Inclure uniquement les répertoires souhaités
           lcov --extract coverage.info "*lib/linearAlgebra/*" --output-file coverage.info
-          # Ajouter manuellement les fichiers non couverts
-          find lib/linearAlgebra -name "*.cpp" -o -name "*.hpp" | xargs -I {} lcov --add-tracefile <(lcov --zerocounters --add-tracefile /dev/null --capture --directory . --include "{}") --output-file coverage.info
           # Liste les informations de couverture
           lcov --list coverage.info
-
           
       - name: Generate HTML Report
         run: |
