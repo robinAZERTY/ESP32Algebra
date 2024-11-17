@@ -13,7 +13,7 @@ A lots of classes are already implemented, but only few of them are officially a
 - [ ] Documentation for all classes
 - [ ] Performance tests
 - [ ] More examples
-- [ ] Publish on PlatformIO Library Manager
+- [X] Publish on PlatformIO Library Manager
 
 ## Testing
 To run the unit tests, you can use the following command:
