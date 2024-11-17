@@ -24,7 +24,7 @@
   ],
   "exports": {
     "include": [
-      "LICENCSE",
+      "LICENCE",
       "docs/*",
       "examples/*",
       "include/*",
@@ -32,6 +32,6 @@
     ]
   },
   "license": "GPL-3.0-only",
-  "frameworks": "arduino",
-  "platforms": "espressif32"
+  "frameworks": ["arduino", "*"],
+  "platforms": ["espressif32", "native"]
 }
